@@ -1,17 +1,24 @@
 // Movie.jsx
 import './App.css';
 
-function Movie({ name, year, rating }) {
-  // just testing how props get passed to each movie
-  // making sure each value displays correctly
-
-  
+function Movie({ title, year, rating, poster }) {
+  // confirming values display correctly
 
   return (
+    // Adding in movie posters for those sweet potential bonus points!
     <div className="movie-card">
-      <h2>{name}</h2> {}
-      <p>Year: {year}</p> {}
-      <p>Rating: {rating}</p> {}
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <img 
+          src={poster} 
+          alt={`${title} poster`} 
+          style={{ width: '100px', height: '150px', objectFit: 'cover', marginRight: '20px', borderRadius: '8px' }}
+        />
+        <div>
+          <h3>{title}</h3>
+          <p><strong>Year:</strong> {year}</p>
+          <p><strong>Rating:</strong> {rating}</p>
+        </div>
+      </div>
     </div>
   );
 }

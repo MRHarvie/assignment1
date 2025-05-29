@@ -7,9 +7,10 @@ function MovieList({ movies }) {
       {movies.map((movie, index) => (
         <Movie
           key={index}
-          name={movie.name}
+          title={movie.title}
           year={movie.year}
           rating={movie.rating}
+          poster={movie.poster} 
         />
       ))}
     </div>
