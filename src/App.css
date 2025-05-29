@@ -1,37 +1,63 @@
 /* App.css */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
   margin: 0;
   padding: 0;
 }
 
 .App {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
-  background-color: #282c34;
-  color: white;
+  background-color: #343a40;
+  color: #ffffff;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
 }
 
+.navbar button {
+  background-color: #ffc107;
+  border: none;
+  color: #212529;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar button:hover {
+  background-color: #e0a800;
+}
 
 .movie-card {
-  background-color: rgba(255, 255, 255, 0.797);
-  color: #000;
+  background-color: #f1f3f5;
   padding: 15px 20px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #0d6efd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.movie-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+}
+
+.movie-card p {
+  margin: 5px 0;
+  font-size: 1rem;
 }
