@@ -6,6 +6,7 @@ function NavBar() {
   // trying to toggle login/logout button text
   const [loggedIn, setLoggedIn] = useState(false);
 
+  
   // test function to flip button state
   const handleLoginToggle = () => {
     setLoggedIn(!loggedIn);

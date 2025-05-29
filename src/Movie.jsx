@@ -5,6 +5,8 @@ function Movie({ name, year, rating }) {
   // just testing how props get passed to each movie
   // making sure each value displays correctly
 
+  
+
   return (
     <div className="movie-card">
       <h2>{name}</h2> {}
