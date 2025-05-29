@@ -1,21 +1,24 @@
-//practice code intitating
-
+// NavBar.jsx
 import { useState } from 'react';
+import './App.css';
 
 function NavBar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // trying to toggle login/logout button text
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  const toggleLogin = () => {
-    setIsLoggedIn(!isLoggedIn);
+  // test function to flip button state
+  const handleLoginToggle = () => {
+    setLoggedIn(!loggedIn);
   };
 
   return (
-    <nav>
-      <h1>Assignment 1</h1>
-      <button onClick={toggleLogin}>
-        {isLoggedIn ? 'Logout' : 'Login'}
+    <div className="navbar">
+      <div>Assignment 1</div>
+      {/* button shows login/logout based on state */}
+      <button onClick={handleLoginToggle}>
+        {loggedIn ? 'Logout' : 'Login'}
       </button>
-    </nav>
+    </div>
   );
 }
 
