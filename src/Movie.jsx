@@ -1,25 +1,25 @@
-// Movie.jsx
+
+import Card from 'react-bootstrap/Card';
 import './App.css';
 
 function Movie({ title, year, rating, poster }) {
-  // confirming values display correctly
+  // Confirming props display correctly and swapping out custom styling for Bootstrap
 
   return (
-    // Adding in movie posters for those sweet potential bonus points!
-    <div className="movie-card">
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <img 
-          src={poster} 
-          alt={`${title} poster`} 
-          style={{ width: '100px', height: '150px', objectFit: 'cover', marginRight: '20px', borderRadius: '8px' }}
-        />
-        <div>
-          <h3>{title}</h3>
-          <p><strong>Year:</strong> {year}</p>
-          <p><strong>Rating:</strong> {rating}</p>
-        </div>
-      </div>
-    </div>
+    // attempting to use Bootstrap's Card component for styling bonus marks
+    <Card className="mb-4 shadow-sm" style={{ width: '100%', maxWidth: '250px' }}>
+      <Card.Img 
+        variant="top" 
+        src={poster} 
+        alt={`${title} poster`} 
+        style={{ height: '350px', objectFit: 'cover' }}
+      />
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text><strong>Year:</strong> {year}</Card.Text>
+        <Card.Text><strong>Rating:</strong> {rating}</Card.Text>
+      </Card.Body>
+    </Card>
   );
 }
 
